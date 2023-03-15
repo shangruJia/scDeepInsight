@@ -14,8 +14,11 @@ The paper of scDeepInsight has been uploaded to bioRxiv: [scDeepInsight: a super
 
 #### 3. Environment information
 Python:
+
 Anndata: 0.7.6
 
 R:
+
 Seurat: 4.2.0
+
 SeuratData: 0.2.2
