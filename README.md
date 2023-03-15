@@ -13,12 +13,6 @@ The paper of scDeepInsight has been uploaded to bioRxiv: [scDeepInsight: a super
 (c) Utilize pretrained model to annotate query dataset
 
 #### 3. Environment information
-Python:
-
-Anndata: 0.7.6
-
-R:
-
-Seurat: 4.2.0
-
-SeuratData: 0.2.2
+(Python) Anndata: 0.7.6
+(R )Seurat 4.2.0
+(R) SeuratData: 0.2.2
