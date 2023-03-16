@@ -9,8 +9,8 @@
 - (a) Download of reference and query datasets. The reference dataset can be downloaded from: [PBMC reference dataset](https://atlas.fredhutch.org/nygc/multimodal-pbmc/)
   
   A sample query dataset is provided in this repository.
-- (b) Conduct preprecessing and batch effect correction
-- (c) Utilize pretrained model to annotate query dataset
+- (b) Conduct preprecessing and batch effect correction.
+- (c) Utilize pretrained model to annotate query dataset.
 
 #### 3. Environment information
 - (Python) Anndata: 0.7.6
