@@ -2,7 +2,8 @@ library(Seurat)
 library(SeuratDisk)
 
 reference <- readRDS("reference.rds")
-query <- LoadH5Seurat("query_sample.h5Seurat")
+Convert("./sample/sample.h5ad", dest = "h5seurat", overwrite = FALSE)
+query <- LoadH5Seurat("sample.h5seurat")
 gene_list <- unlist(read.csv("./pretrained/pretrained_genes.csv")["gene_ids"])
 # Select genes analyzed in the pretrained model in the reference dataset and query dataset
 reference <- subset(reference, features=gene_list)
