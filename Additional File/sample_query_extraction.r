@@ -1,3 +1,4 @@
+# This file describes how the sample query dataset is generated. Users don't have to run this script.
 library(Seurat)
 library(SeuratDisk)
 
