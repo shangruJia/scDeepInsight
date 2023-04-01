@@ -12,7 +12,7 @@
 <br> To annotate target query dataset, users should first perform normalization and batch effect correction between their query dataset and the reference dataset. These processes are discribed in the file batch_effect_correction.r, which is in the Annotate query dataset folder.
 
 - (c) Utilize pretrained model to annotate query dataset. 
--<br> After finnishing preprocessing the query dataset, users can use scDeepInsight to convert non-image processed data to images using pretrained image transformer. Then converted figures are fed into pretrained model to annotate cell types of this query dataset. Detailed process are mentioned in the file test_on_query.ipynb, which is also in the Annotate query dataset folder. Pretained model, image transormer, label encoder are provided in the folder: Model pretraining/pretrained model.
+<br> After finnishing preprocessing the query dataset, users can use scDeepInsight to convert non-image processed data to images using pretrained image transformer. Then converted figures are fed into pretrained model to annotate cell types of this query dataset. Detailed process are mentioned in the file test_on_query.ipynb, which is also in the Annotate query dataset folder. Pretained model, image transormer, label encoder are provided in the folder: Model pretraining/pretrained model.
 
 #### 3. Environment information
 - (Python) Anndata: 0.8.0
