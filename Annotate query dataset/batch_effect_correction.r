@@ -36,5 +36,5 @@ sct <- IntegrateData(anchorset = merge.anchors, normalization.method = "SCT")
 SaveH5Seurat(sct, assay = "integrated", filename = file.path(path,"merge_sct.h5Seurat"))
 # Output: "merge_sct.h5ad", which is used in the "test_on_query.ipynb" annoation notebook.
 Convert(file.path(path,"merge_sct.h5Seurat"), assay = "integrated", dest = "h5ad")
-# Calculate the whole time cost in the batch effect correction process.
+# Calculate the whole time cost in the batch effect correction process. The system time could be used to measure the time cost.
 time_cost <- proc.time() - start
