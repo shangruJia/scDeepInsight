@@ -14,12 +14,12 @@
  
 - (b) *Where are the pre-trained model and sample query dataset stored?*
 <br> All files (six files) to annotate the sample query dataset are provided in this folder: pretrained_sample. 
-  - (1) In this folder, [checkpoint_model_pre.pth](https://github.com/shangruJia/scDeepInsight/model_pretraining/scDeepInsight/checkpoint_model_pre.pth) is the pre-trained model on reference dataset. 
-  - (2) [img_transformer_pre.obj](https://github.com/shangruJia/scDeepInsight/model_pretraining/scDeepInsight/img_transformer_pre.obj) is the trained image transformer to convert query dataset to images.
-  - (3) [label_encoder_pre.obj](https://github.com/shangruJia/scDeepInsight/model_pretraining/scDeepInsight/label_encoder_pre.obj) is the label encoder used in the pre-training process.
-  - (4) [pretrained_genes.csv](https://github.com/shangruJia/scDeepInsight/model_pretraining/scDeepInsight/pretrained_genes.csv) records 3,000 genes analyzed in the pretrained model.
-  - (5) [sample.h5ad](https://github.com/shangruJia/scDeepInsight/model_pretraining/scDeepInsight/sample.h5ad) is the sample query dataset. Details about how this query dataset is sliced from the raw query dataset is in the Additional File folder.
-  - (6) [real_sample_labels.csv](https://github.com/shangruJia/scDeepInsight/model_pretraining/scDeepInsight/real_sample_labels.csv) records the expert annotated cell-type labels of the sample query dataset in previous study.
+  - (1) In this folder, [checkpoint_model_pre.pth](https://github.com/shangruJia/scDeepInsight/blob/main/model_pretraining/scDeepInsight/checkpoint_model_pre.pth) is the pre-trained model on reference dataset. 
+  - (2) [img_transformer_pre.obj](https://github.com/shangruJia/scDeepInsight/blob/main/model_pretraining/scDeepInsight/img_transformer_pre.obj) is the trained image transformer to convert query dataset to images.
+  - (3) [label_encoder_pre.obj](https://github.com/shangruJia/scDeepInsight/blob/main/model_pretraining/scDeepInsight/label_encoder_pre.obj) is the label encoder used in the pre-training process.
+  - (4) [pretrained_genes.csv](https://github.com/shangruJia/scDeepInsight/blob/main/model_pretraining/scDeepInsight/pretrained_genes.csv) records 3,000 genes analyzed in the pretrained model.
+  - (5) [sample.h5ad](https://github.com/shangruJia/scDeepInsight/blob/main/model_pretraining/scDeepInsight/sample.h5ad) is the sample query dataset. Details about how this query dataset is sliced from the raw query dataset is in the Additional File folder.
+  - (6) [real_sample_labels.csv](https://github.com/shangruJia/scDeepInsight/blob/main/model_pretraining/scDeepInsight/real_sample_labels.csv) records the expert annotated cell-type labels of the sample query dataset in previous study.
 
 - (c) *How to annotate the sample query dataset using pre-trained model?*
 <br> The annotation process contains two steps, two scripts are stored in the Annotate query dataset folder:
