@@ -13,7 +13,7 @@
 <br> A sample query dataset, which is a slice of the raw query dataset (random sampling), is also provided in this the folder: pretrained_sample. Users can use this sample query dataset and provided pre-trained model to have a quick start using scDeepInsight.
  
 - (b) *Where are the pre-trained model and sample query dataset stored?*
-<br> All files (six files) to annotate the sample query dataset are provided in this folder: pretrained_sample. 
+<br> All files (six files) to annotate the sample query dataset are provided in this folder: pretrained_sample. We have provided pretained models both with batch efect correction and with out batch efect correction. For the pretrained model without correction, please refer to: [pretrained_nobc](https://github.com/shangruJia/scDeepInsight/blob/main/pretrained_sample/pretrained_nobc/checkpoint_model_pre.pth)
   - (1) In this folder, [checkpoint_model_pre.pth](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_sample/pretrained_withbc/checkpoint_model_pre.pth) is the pre-trained model on reference dataset. 
   - (2) [img_transformer_pre.obj](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_sample/pretrained_withbc/img_transformer_pre.obj) is the trained image transformer to convert query dataset to images.
   - (3) [label_encoder_pre.obj](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_sample/pretrained_withbc/label_encoder_pre.obj) is the label encoder used in the pre-training process.
