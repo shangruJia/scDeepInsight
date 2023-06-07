@@ -1,1 +1,1 @@
-import scDeepInsight
+import scdeepinsight
