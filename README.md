@@ -4,7 +4,7 @@
 - scdeepinsight has already been packaged and pubblished to PyPI: [scdeepinsight v1.1.0](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
 
 #### **1. Introduction of the pipeline**
-![](https://github.com/shangruJia/scDeepInsight/blob/main/figures/workflow.png)
+![](https://github.com/shangruJia/scDeepInsight-additional/blob/main/Figures/workflow.png)
 
 #### **2. Instructions**
 - (a) *How can we download the reference and query datasets?*
