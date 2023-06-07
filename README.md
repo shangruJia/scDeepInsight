@@ -1,7 +1,7 @@
 # scDeepInsight
 - A supervised single-cell annotation method
 - The paper of scDeepInsight has been uploaded to bioRxiv: [scDeepInsight: a supervised cell-type identification method for scRNA-seq data with deep learning](https://www.biorxiv.org/content/10.1101/2023.03.09.531861v1)
-- scdeepinsight has already been packaged and pubblished to PyPI: [scdeepinsight v0.2.0](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
+- scdeepinsight has already been packaged and pubblished to PyPI: [scdeepinsight v1.1.0](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
 
 #### **1. Introduction of the pipeline**
 ![](https://github.com/shangruJia/scDeepInsight/blob/main/figures/workflow.png)
@@ -14,13 +14,13 @@
 <br> A sample query dataset, which is a slice of the raw query dataset (random sampling), is also provided in this the folder: pretrained_sample. Users can use this sample query dataset and provided pre-trained model to have a quick start using scDeepInsight.
  
 - (b) *Where are the pre-trained model and sample query dataset stored?*
-<br> All files (six files) to annotate the sample query dataset are provided in this folder: pretrained_sample. We have provided pretained models both with batch efect correction and with out batch efect correction. For the pretrained model without correction, please refer to: [pretrained_nobc](https://github.com/shangruJia/scDeepInsight/blob/main/pretrained_sample/pretrained_nobc/checkpoint_model_pre.pth)
-  - (1) In this folder, [checkpoint_model_pre.pth](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_sample/pretrained_withbc/checkpoint_model_pre.pth) is the pre-trained model on reference dataset. 
-  - (2) [img_transformer_pre.obj](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_sample/pretrained_withbc/img_transformer_pre.obj) is the trained image transformer to convert query dataset to images.
-  - (3) [label_encoder_pre.obj](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_sample/pretrained_withbc/label_encoder_pre.obj) is the label encoder used in the pre-training process.
-  - (4) [pretrained_genes.csv](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_sample/pretrained_withbc/pretrained_genes.csv) records 3,000 genes analyzed in the pretrained model.
-  - (5) [sample.h5ad](https://github.com/shangruJia/scDeepInsight/blob/main/pretrained_sample/sample.h5ad) is the sample query dataset. Details about how this query dataset is sliced from the raw query dataset is in the Additional File folder.
-  - (6) [real_sample_labels.csv](https://github.com/shangruJia/scDeepInsight/blob/main/pretrained_sample/real_sample_labels.csv) records the expert annotated cell-type labels of the sample query dataset in previous study.
+<br> All files (six files) to annotate the sample query dataset are provided in this folder: pretrained_sample. We have provided pretained models both with batch efect correction and with out batch efect correction. For the pretrained model without correction, please refer to: [pretrained_nobc](https://github.com/shangruJia/scDeepInsight/blob/main/pretrained_files/pretrained_nobc/checkpoint_model_pre.pth)
+  - (1) In this folder, [checkpoint_model_pre.pth](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_files/pretrained_withbc/checkpoint_model_pre.pth) is the pre-trained model on reference dataset. 
+  - (2) [img_transformer_pre.obj](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_files/pretrained_withbc/img_transformer_pre.obj) is the trained image transformer to convert query dataset to images.
+  - (3) [label_encoder_pre.obj](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_files/pretrained_withbc/label_encoder_pre.obj) is the label encoder used in the pre-training process.
+  - (4) [pretrained_genes.csv](https://github.com/shangruJia/scDeepInsight/tree/main/pretrained_files/pretrained_withbc/pretrained_genes.csv) records 3,000 genes analyzed in the pretrained model.
+  - (5) [sample.h5ad](https://github.com/shangruJia/scDeepInsight/blob/main/sample_dataset/sample.h5ad) is the sample query dataset. Details about how this query dataset is sliced from the raw query dataset is in the Additional File folder.
+  - (6) [real_sample_labels.csv](https://github.com/shangruJia/scDeepInsight/blob/main/sample_dataset/real_sample_labels.csv) records the expert annotated cell-type labels of the sample query dataset in previous study.
 
 - (c) *How to annotate the sample query dataset using pre-trained model?*
 <br> The annotation process contains two steps, two scripts are stored in the Annotate query dataset folder:
@@ -33,6 +33,6 @@
 <br> To annotate customized query dataset, users only have to change the query dataset to their target dataset and perform the same batch effect correction and annotaion process. The reference dataset and pre-trained model do not have to be changed.
 
 #### **3. Environment information**
-- (Python) Anndata: 0.8.0
+- (Python) Anndata: 0.9.1
 - (R )Seurat 4.2.0
 - (R) SeuratDisk: 0.0.0.9020
