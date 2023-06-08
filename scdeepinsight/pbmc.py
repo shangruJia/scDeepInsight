@@ -89,9 +89,9 @@ def Annotate(barcode_path:str, image_path:str, batch_size:int=128):
 
     # Use pre-trained model to predict cell types on the sample query dataset.
     if (device == 'cpu'):
-        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth")))
+        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth"),map_location=torch.device('cpu')))
     else:
-        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth"), map_location=torch.device('cpu')))
+        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth")))
     mod.eval()
 
     out = []
