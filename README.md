@@ -1,7 +1,7 @@
 # scDeepInsight
 - A supervised single-cell annotation method
 - The paper of scDeepInsight has been uploaded to bioRxiv: [scDeepInsight: a supervised cell-type identification method for scRNA-seq data with deep learning](https://www.biorxiv.org/content/10.1101/2023.03.09.531861v1)
-- scdeepinsight has already been packaged and published to PyPI: [scdeepinsight v1.1.0](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
+- scdeepinsight has already been packaged and published to PyPI: [scdeepinsight v1.1.1](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
 - For users who wish to implement scDeepInsight in a separate environment, the docker image file is available at: [Docker Image](https://hub.docker.com/r/shangrujia/scdeepinsight).
 
 #### **1. Introduction of the pipeline**
