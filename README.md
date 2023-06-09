@@ -1,12 +1,7 @@
 # scDeepInsight
-<<<<<<< HEAD
-- A supervised single-cell annotation method
-- The paper of scDeepInsight has been uploaded to bioRxiv: [scDeepInsight: a supervised cell-type identification method for scRNA-seq data with deep learning](https://www.biorxiv.org/content/10.1101/2023.03.09.531861v1)
-- scdeepinsight has already been packaged and published to PyPI: [scdeepinsight v1.1.1](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
-- For users who wish to implement scDeepInsight in a separate environment, the docker image file is available at: [Docker Image](https://hub.docker.com/r/shangrujia/scdeepinsight).
-=======
+
 scDeepInsight is a supervised deep learning-based single-cell method for annotation of single-cell RNA-sequencing datasets. This repository provies the code for core method imlementation as well as optional batch correction scripts. Batch correction is recommended for cases when a reference dataset was produced in a different experement than the dataset being annotated. We also include a pre-trained models that can be used for anntation of periferal blood mononuclear cell types. 
->>>>>>> pr/1
+
 
 Please see the following pre-print for additional details (bioRxiv): scDeepInsight: a supervised cell-type identification method for scRNA-seq data with deep learning Shangru Jia, Artem Lysenko, Keith A Boroevich, Alok Sharma, Tatsuhiko Tsunoda
 bioRxiv 2023.03.09.531861; [doi: https://doi.org/10.1101/2023.03.09.531861](https://www.biorxiv.org/content/10.1101/2023.03.09.531861v1)
@@ -69,7 +64,7 @@ A more comprehensive analysis workflow, which was used for the scDeepInsgiht pap
 
 ### **4 Links**
 
-- scdeepinsight on PyPI: [scdeepinsight v1.1.0](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
+- scDeepInsight on PyPI: [scdeepinsight](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to figure out how to use this package.
 - DockerHub: [Docker Image](https://hub.docker.com/r/shangrujia/scdeepinsight).
 
 #### **5. Environment information**
@@ -77,4 +72,5 @@ A more comprehensive analysis workflow, which was used for the scDeepInsgiht pap
 - (R) Seurat 4.2.0
 - (R) SeuratDisk: 0.0.0.9020
 
-
+#### **6. Release notes**
+The latest verson of scDeepInsight is 1.1.1
