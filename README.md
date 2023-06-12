@@ -72,5 +72,5 @@ A more comprehensive analysis workflow, which was used for the scDeepInsgiht pap
 - (R) Seurat 4.2.0
 - (R) SeuratDisk: 0.0.0.9020
 
-#### **6. Release notes**
+#### **6. Version related**
 Users can choose different versions of scdeepinsight based on the CUDA version. The latest version of scDeepInsight is 2.3.0
