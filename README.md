@@ -12,9 +12,9 @@ The packged version of the tool can be installed using the following command:
 
     pip3 install scdeepinsight
     
-This package was tested and confirmed working with PyTroch v1.11.0 / CUDA v10.2 (NVIDIA-SMI:440.64). Note that if no GPU is avaiable on your system, a CPU-only mode is also supported.
+This package was tested and confirmed working with PyTroch v1.12.0 / CUDA v10.2 (NVIDIA-SMI:440.64). Note that if no GPU is avaiable on your system, a CPU-only mode is also supported.
 
-Alternatively, a Docker image is also avialbe and can be obtained as follows:
+Alternatively, a Docker image is also available and can be obtained as follows:
 
     docker pull shangrujia/scdeepinsight
 
