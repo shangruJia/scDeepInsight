@@ -8,6 +8,7 @@ import pickle
 import torch
 from torch import nn
 from torchvision import transforms
+from pyDeepInsight import ImageTransformer
 from efficientnet_pytorch import EfficientNet
 from torch.utils.data import Dataset
 from PIL import Image
@@ -15,9 +16,9 @@ import scanpy as sc
 
 
 def ImageTransform(query_path:str, barcode_path:str, image_path:str):
-    # query_path: The absoulte path of the target scRNA-seq dataset (end with .h5ad). 
-    # barcode_path: The absoulte path where you wish to store the generated barcode file (end with .csv).
-    # image_path: The absoulte path where you wish to store the generated image file (end with .npy).
+    # query_path: The absolute path of the target scRNA-seq dataset (end with .h5ad). 
+    # barcode_path: The absolute path where you wish to store the generated barcode file (end with .csv).
+    # image_path: The absolute path where you wish to store the generated image file (end with .npy).
     query = anndata.read_h5ad(query_path)
     path = os.path.abspath(__file__) # The installation path.
     folder = os.path.dirname(path)   
@@ -56,9 +57,9 @@ def ImageTransform(query_path:str, barcode_path:str, image_path:str):
     np.save(image_path, query_img)
 
 def Annotate(barcode_path:str, image_path:str, batch_size:int=128):
-    #barcode_path: The absoulte path where you have stored the generated barcode file (end with .csv).
-    #image_path: The absoulte path where you have stored the generated image file (end with .npy).
-    #batch_size: The batch size you wish to load to the converted image dataset when using the pretrained model for annotation. Defaulted value is 128.
+    #barcode_path: The absolute path where you have stored the generated barcode file (end with .csv).
+    #image_path: The absolute path where you have stored the generated image file (end with .npy).
+    #batch_size: The batch size you wish to load to the converted image dataset when using the pretrained model for annotation. Default value is 128.
     path = os.path.abspath(__file__) # The installation path.
     folder = os.path.dirname(path)   
     prefolder = os.path.join(folder,'pretrained_files_pbmc') #The path of the pretrained files.
@@ -78,22 +79,18 @@ def Annotate(barcode_path:str, image_path:str, batch_size:int=128):
     test = MyTestSet(image_path)
     test_loader = torch.utils.data.DataLoader(test, batch_size= batch_size, shuffle=False)
     # The pre-trained model can identify 31 cell types, so num_classes is 31.
-    mod =EfficientNet.from_pretrained('efficientnet-b3', num_classes=31)
+    mod = EfficientNet.from_pretrained('efficientnet-b3', num_classes=31)
     # Prioritize using GPUs to load the model. 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    if torch.cuda.device_count() > 1:
-        mod = nn.DataParallel(mod)
+    mod = nn.DataParallel(mod)
+    # Use pre-trained model to predict cell types on the sample query dataset.
+    if (torch.cuda.is_available()):
+        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth")), strict=False)
+    else:
+        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth"), map_location=torch.device('cpu')), strict=False)
 
     mod.to(device)
-    mod = mod.to(device)
-
-    # Use pre-trained model to predict cell types on the sample query dataset.
-    if (device == 'cpu'):
-        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth"),map_location=torch.device('cpu')))
-    else:
-        mod.load_state_dict(torch.load(Path(prefolder, "checkpoint_model_pbmc.pth")))
     mod.eval()
-
     out = []
     for i, data in enumerate(test_loader):
         query = data
@@ -112,3 +109,4 @@ def Annotate(barcode_path:str, image_path:str, batch_size:int=128):
     barcode = pd.read_csv(barcode_path, index_col=0)
     pred_label.index = barcode["barcode"].values
     return pred_label
+    
