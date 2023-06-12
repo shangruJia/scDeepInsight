@@ -62,7 +62,7 @@ A more comprehensive analysis workflow, which was used for the scDeepInsgiht pap
 - (c) *Annotating custom datasets*
 <br> To annotate your own datasets, replace the query dataset accordingly and then perform the same batch effect correction and annotation steps as shown in the example. If there is no new reference dataset, the provided reference dataset and pre-trained model can be re-used to do your own annotation.
 
-### **4 Links**
+#### **4 Links**
 
 - scDeepInsight on PyPI: [scdeepinsight](https://pypi.org/project/scdeepinsight/). Users can refer to [Tutorial](https://github.com/shangruJia/scDeepInsight/blob/main/Tutorial.ipynb) to see how to use this package.
 - DockerHub: [Docker Image](https://hub.docker.com/r/shangrujia/scdeepinsight).
