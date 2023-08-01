@@ -6,6 +6,8 @@ scDeepInsight is a supervised deep learning-based single-cell method for annotat
 Please see the following pre-print for additional details (bioRxiv): scDeepInsight: a supervised cell-type identification method for scRNA-seq data with deep learning Shangru Jia, Artem Lysenko, Keith A Boroevich, Alok Sharma, Tatsuhiko Tsunoda
 bioRxiv 2023.03.09.531861; [doi: https://doi.org/10.1101/2023.03.09.531861](https://www.biorxiv.org/content/10.1101/2023.03.09.531861v1)
 
+The paper has now been published in Briefings in Bioinformatics: [DOI: 10.1093/bib/bbad266](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbad266/7233965)
+
 #### **1. Installation**
 
 The packaged version of the tool can be installed using the following command:
